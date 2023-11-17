@@ -149,7 +149,7 @@ pub fn gen_protos() {
                 .map(|(n, f)| {
                     ClassField::new(
                         n.clone(),
-                        f.offset + 0x10,
+                        f.offset,
                         f.field_type.clone(),
                         f.original_type.clone(),
                         Some(f.size),

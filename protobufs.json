@@ -2,19 +2,19 @@
     "CSGOInterpolationInfoPB": {
         "fields": {
             "frac": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
             },
             "src_tick": {
-                "offset": 12,
+                "offset": 28,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
             "dst_tick": {
-                "offset": 16,
+                "offset": 32,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
@@ -24,19 +24,19 @@
     "CSubtickMoveStep": {
         "fields": {
             "button": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "u64",
                 "original_type": "T_UQUAD(0023)",
                 "size": 8
             },
             "pressed": {
-                "offset": 16,
+                "offset": 32,
                 "field_type": "bool",
                 "original_type": "T_BOOL08(0030)",
                 "size": 1
             },
             "when": {
-                "offset": 20,
+                "offset": 36,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
@@ -46,91 +46,91 @@
     "CSGOInputHistoryEntryPB": {
         "fields": {
             "view_angles": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "*mut CMsgQAngle",
                 "original_type": "4123",
                 "size": 8
             },
             "shoot_position": {
-                "offset": 16,
-                "field_type": "*mut CMsgVector",
-                "original_type": "4129",
-                "size": 8
-            },
-            "target_head_pos_check": {
-                "offset": 24,
-                "field_type": "*mut CMsgVector",
-                "original_type": "4129",
-                "size": 8
-            },
-            "target_abs_pos_check": {
                 "offset": 32,
                 "field_type": "*mut CMsgVector",
                 "original_type": "4129",
                 "size": 8
             },
-            "target_abs_ang_check": {
+            "target_head_pos_check": {
                 "offset": 40,
+                "field_type": "*mut CMsgVector",
+                "original_type": "4129",
+                "size": 8
+            },
+            "target_abs_pos_check": {
+                "offset": 48,
+                "field_type": "*mut CMsgVector",
+                "original_type": "4129",
+                "size": 8
+            },
+            "target_abs_ang_check": {
+                "offset": 56,
                 "field_type": "*mut CMsgQAngle",
                 "original_type": "4123",
                 "size": 8
             },
             "cl_interp": {
-                "offset": 48,
-                "field_type": "*mut CSGOInterpolationInfoPB",
-                "original_type": "4141",
-                "size": 8
-            },
-            "sv_interp0": {
-                "offset": 56,
-                "field_type": "*mut CSGOInterpolationInfoPB",
-                "original_type": "4141",
-                "size": 8
-            },
-            "sv_interp1": {
                 "offset": 64,
                 "field_type": "*mut CSGOInterpolationInfoPB",
                 "original_type": "4141",
                 "size": 8
             },
-            "player_interp": {
+            "sv_interp0": {
                 "offset": 72,
                 "field_type": "*mut CSGOInterpolationInfoPB",
                 "original_type": "4141",
                 "size": 8
             },
-            "render_tick_count": {
+            "sv_interp1": {
                 "offset": 80,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
+                "field_type": "*mut CSGOInterpolationInfoPB",
+                "original_type": "4141",
+                "size": 8
             },
-            "render_tick_fraction": {
-                "offset": 84,
-                "field_type": "f32",
-                "original_type": "T_REAL32(0040)",
-                "size": 4
-            },
-            "player_tick_count": {
+            "player_interp": {
                 "offset": 88,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
+                "field_type": "*mut CSGOInterpolationInfoPB",
+                "original_type": "4141",
+                "size": 8
             },
-            "player_tick_fraction": {
-                "offset": 92,
-                "field_type": "f32",
-                "original_type": "T_REAL32(0040)",
-                "size": 4
-            },
-            "frame_number": {
+            "render_tick_count": {
                 "offset": 96,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "target_ent_index": {
+            "render_tick_fraction": {
                 "offset": 100,
+                "field_type": "f32",
+                "original_type": "T_REAL32(0040)",
+                "size": 4
+            },
+            "player_tick_count": {
+                "offset": 104,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "player_tick_fraction": {
+                "offset": 108,
+                "field_type": "f32",
+                "original_type": "T_REAL32(0040)",
+                "size": 4
+            },
+            "frame_number": {
+                "offset": 112,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "target_ent_index": {
+                "offset": 116,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
@@ -140,103 +140,103 @@
     "CBaseUserCmdPB": {
         "fields": {
             "subtick_moves": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "cs2sdk_core::protobufs::ProtobufArrayInline<CSubtickMoveStep>",
                 "original_type": "google::protobuf::RepeatedPtrField<CSubtickMoveStep>",
                 "size": 16
             },
             "move_crc": {
-                "offset": 32,
+                "offset": 48,
                 "field_type": "*mut cs2sdk_core::protobufs::ProtobufString",
                 "original_type": "google::protobuf::internal::ArenaStringPtr",
                 "size": 8
             },
             "buttons_pb": {
-                "offset": 40,
+                "offset": 56,
                 "field_type": "*mut CInButtonStatePB",
                 "original_type": "4117",
                 "size": 8
             },
             "viewangles": {
-                "offset": 48,
+                "offset": 64,
                 "field_type": "*mut CMsgQAngle",
                 "original_type": "4123",
                 "size": 8
             },
             "command_number": {
-                "offset": 56,
+                "offset": 72,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
             "tick_count": {
-                "offset": 60,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
-            },
-            "forwardmove": {
-                "offset": 64,
-                "field_type": "f32",
-                "original_type": "T_REAL32(0040)",
-                "size": 4
-            },
-            "leftmove": {
-                "offset": 68,
-                "field_type": "f32",
-                "original_type": "T_REAL32(0040)",
-                "size": 4
-            },
-            "upmove": {
-                "offset": 72,
-                "field_type": "f32",
-                "original_type": "T_REAL32(0040)",
-                "size": 4
-            },
-            "impulse": {
                 "offset": 76,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "weaponselect": {
+            "forwardmove": {
                 "offset": 80,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
+                "field_type": "f32",
+                "original_type": "T_REAL32(0040)",
                 "size": 4
             },
-            "random_seed": {
+            "leftmove": {
                 "offset": 84,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
+                "field_type": "f32",
+                "original_type": "T_REAL32(0040)",
                 "size": 4
             },
-            "mousedx": {
+            "upmove": {
                 "offset": 88,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
+                "field_type": "f32",
+                "original_type": "T_REAL32(0040)",
                 "size": 4
             },
-            "mousedy": {
+            "impulse": {
                 "offset": 92,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "consumed_server_angle_changes": {
+            "weaponselect": {
                 "offset": 96,
-                "field_type": "u32",
-                "original_type": "T_UINT4(0075)",
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "cmd_flags": {
+            "random_seed": {
                 "offset": 100,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "pawn_entity_handle": {
+            "mousedx": {
                 "offset": 104,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "mousedy": {
+                "offset": 108,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "consumed_server_angle_changes": {
+                "offset": 112,
+                "field_type": "u32",
+                "original_type": "T_UINT4(0075)",
+                "size": 4
+            },
+            "cmd_flags": {
+                "offset": 116,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "pawn_entity_handle": {
+                "offset": 120,
                 "field_type": "u32",
                 "original_type": "T_UINT4(0075)",
                 "size": 4
@@ -246,61 +246,61 @@
     "CUserMessage_Inventory_Response_InventoryDetail": {
         "fields": {
             "name": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "*mut cs2sdk_core::protobufs::ProtobufString",
                 "original_type": "google::protobuf::internal::ArenaStringPtr",
                 "size": 8
             },
             "base_name": {
-                "offset": 16,
+                "offset": 32,
                 "field_type": "*mut cs2sdk_core::protobufs::ProtobufString",
                 "original_type": "google::protobuf::internal::ArenaStringPtr",
                 "size": 8
             },
             "primary": {
-                "offset": 24,
-                "field_type": "i64",
-                "original_type": "T_QUAD(0013)",
-                "size": 8
-            },
-            "offset": {
-                "offset": 32,
-                "field_type": "i64",
-                "original_type": "T_QUAD(0013)",
-                "size": 8
-            },
-            "first": {
                 "offset": 40,
                 "field_type": "i64",
                 "original_type": "T_QUAD(0013)",
                 "size": 8
             },
-            "index": {
+            "offset": {
                 "offset": 48,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
+                "field_type": "i64",
+                "original_type": "T_QUAD(0013)",
+                "size": 8
             },
-            "base_detail": {
-                "offset": 52,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
-            },
-            "base": {
+            "first": {
                 "offset": 56,
                 "field_type": "i64",
                 "original_type": "T_QUAD(0013)",
                 "size": 8
             },
-            "base_time": {
+            "index": {
                 "offset": 64,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "base_hash": {
+            "base_detail": {
                 "offset": 68,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "base": {
+                "offset": 72,
+                "field_type": "i64",
+                "original_type": "T_QUAD(0013)",
+                "size": 8
+            },
+            "base_time": {
+                "offset": 80,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "base_hash": {
+                "offset": 84,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
@@ -310,19 +310,19 @@
     "CMsgQAngle": {
         "fields": {
             "x": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
             },
             "y": {
-                "offset": 12,
+                "offset": 28,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
             },
             "z": {
-                "offset": 16,
+                "offset": 32,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
@@ -332,25 +332,25 @@
     "CMsgVector": {
         "fields": {
             "x": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
             },
             "y": {
-                "offset": 12,
+                "offset": 28,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
             },
             "z": {
-                "offset": 16,
+                "offset": 32,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
             },
             "w": {
-                "offset": 20,
+                "offset": 36,
                 "field_type": "f32",
                 "original_type": "T_REAL32(0040)",
                 "size": 4
@@ -360,43 +360,43 @@
     "CSGOUserCmdPB": {
         "fields": {
             "input_history": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "cs2sdk_core::protobufs::ProtobufArrayInline<CSGOInputHistoryEntryPB>",
                 "original_type": "google::protobuf::RepeatedPtrField<CSGOInputHistoryEntryPB>",
                 "size": 16
             },
             "base": {
-                "offset": 32,
+                "offset": 48,
                 "field_type": "*mut CBaseUserCmdPB",
                 "original_type": "4108",
                 "size": 8
             },
             "weapon_decision": {
-                "offset": 40,
+                "offset": 56,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
             "weapon_decision_weapon": {
-                "offset": 44,
+                "offset": 60,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
             "attack3_start_history_index": {
-                "offset": 48,
+                "offset": 64,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
             "attack1_start_history_index": {
-                "offset": 52,
+                "offset": 68,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
             "attack2_start_history_index": {
-                "offset": 56,
+                "offset": 72,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
@@ -406,19 +406,19 @@
     "CInButtonStatePB": {
         "fields": {
             "buttonstate1": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "u64",
                 "original_type": "T_UQUAD(0023)",
                 "size": 8
             },
             "buttonstate2": {
-                "offset": 16,
+                "offset": 32,
                 "field_type": "u64",
                 "original_type": "T_UQUAD(0023)",
                 "size": 8
             },
             "buttonstate3": {
-                "offset": 24,
+                "offset": 40,
                 "field_type": "u64",
                 "original_type": "T_UQUAD(0023)",
                 "size": 8
@@ -428,79 +428,79 @@
     "CUserMessage_Inventory_Response": {
         "fields": {
             "inventories": {
-                "offset": 8,
+                "offset": 24,
                 "field_type": "cs2sdk_core::protobufs::ProtobufArrayInline<CUserMessage_Inventory_Response_InventoryDetail>",
                 "original_type": "google::protobuf::RepeatedPtrField<CUserMessage_Inventory_Response_InventoryDetail>",
                 "size": 16
             },
             "inventories2": {
-                "offset": 32,
+                "offset": 48,
                 "field_type": "cs2sdk_core::protobufs::ProtobufArrayInline<CUserMessage_Inventory_Response_InventoryDetail>",
                 "original_type": "google::protobuf::RepeatedPtrField<CUserMessage_Inventory_Response_InventoryDetail>",
                 "size": 16
             },
             "inventories3": {
-                "offset": 56,
+                "offset": 72,
                 "field_type": "cs2sdk_core::protobufs::ProtobufArrayInline<CUserMessage_Inventory_Response_InventoryDetail>",
                 "original_type": "google::protobuf::RepeatedPtrField<CUserMessage_Inventory_Response_InventoryDetail>",
                 "size": 16
             },
             "crc": {
-                "offset": 80,
+                "offset": 96,
                 "field_type": "u32",
                 "original_type": "T_UINT4(0075)",
                 "size": 4
             },
             "item_count": {
-                "offset": 84,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
-            },
-            "osversion": {
-                "offset": 88,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
-            },
-            "perf_time": {
-                "offset": 92,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
-            },
-            "client_timestamp": {
-                "offset": 96,
-                "field_type": "i32",
-                "original_type": "T_INT4(0074)",
-                "size": 4
-            },
-            "platform": {
                 "offset": 100,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "inv_type": {
+            "osversion": {
                 "offset": 104,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "build_version": {
+            "perf_time": {
                 "offset": 108,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
             },
-            "start_time": {
+            "client_timestamp": {
                 "offset": 112,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "platform": {
+                "offset": 116,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "inv_type": {
+                "offset": 120,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "build_version": {
+                "offset": 124,
+                "field_type": "i32",
+                "original_type": "T_INT4(0074)",
+                "size": 4
+            },
+            "start_time": {
+                "offset": 128,
                 "field_type": "i64",
                 "original_type": "T_QUAD(0013)",
                 "size": 8
             },
             "instance": {
-                "offset": 120,
+                "offset": 136,
                 "field_type": "i32",
                 "original_type": "T_INT4(0074)",
                 "size": 4
