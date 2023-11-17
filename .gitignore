@@ -1,0 +1,5 @@
+build/**
+protoc/
+vcpkg/
+out.txt
+cvdump.exe
